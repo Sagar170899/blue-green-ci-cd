@@ -30,6 +30,7 @@ pipeline {
         stage('Deploy to Green') {
             steps {
                 script {
+                    sh 'chmod +x deploy.sh'
                     def CURRENT = sh(script: "ssh -o StrictHostKeyChecking=no -i $SSH_KEY $DEPLOY_USER@$NGINX_IP 'cat ~/nginx/live_env.txt'", returnStdout: true).trim()
                     def TARGET = CURRENT == "blue" ? GREEN_IP : BLUE_IP
                     sh "./deploy.sh $TARGET $SSH_KEY"
