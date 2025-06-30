@@ -2,17 +2,17 @@ pipeline {
     agent any
 
     environment {
-        BLUE_IP = "192.168.1.10"
-        GREEN_IP = "192.168.1.11"
-        NGINX_IP = "192.168.1.100"
+        BLUE_IP = "16.171.43.23"
+        GREEN_IP = "13.60.171.163"
+        NGINX_IP = "16.171.174.95"
         DEPLOY_USER = "ubuntu"
-        SSH_KEY = "/path/to/key.pem"
+        SSH_KEY = "E:\\PWSkills\\AWS\\ec2keypair.pem"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-user/blue-green-ci-cd.git'
+                git 'https://github.com/Sagar170899/blue-green-ci-cd.git'
             }
         }
 
