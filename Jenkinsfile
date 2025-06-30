@@ -6,7 +6,7 @@ pipeline {
         GREEN_IP = "13.60.171.163"
         NGINX_IP = "16.171.174.95"
         DEPLOY_USER = "ubuntu"
-        SSH_KEY = "/home/sagar/.ssh/ec2keypair.pem"
+        SSH_KEY = "/var/lib/jenkins/.ssh/ec2keypair.pem"
     }
 
     stages {
