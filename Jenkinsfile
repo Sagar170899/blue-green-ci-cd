@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        BLUE_IP = "16.171.43.23"
-        GREEN_IP = "13.60.171.163"
-        NGINX_IP = "16.171.174.95"
+        BLUE_IP = "13.51.79.96"
+        GREEN_IP = "13.60.50.99"
+        NGINX_IP = "13.53.205.178"
         DEPLOY_USER = "ubuntu"
         SSH_KEY = "/var/lib/jenkins/.ssh/ec2keypair.pem"
     }
